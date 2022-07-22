@@ -28,7 +28,7 @@ public class UserResource {
     return ResponseEntity.ok().body(
             HttpResponse.builder()
                     .timeStamp(now().toString())
-                    .date(Map.of("page", userService.getUsers(name.orElse(""), page.orElse(0), size.orElse(10))))
+                    .data(Map.of("page", userService.getUsers(name.orElse(""), page.orElse(0), size.orElse(10))))
                     .message("Users Retrieved")
                     .status(HttpStatus.OK)
                     .statusCode(HttpStatus.OK.value())

@@ -17,5 +17,5 @@ public class HttpResponse {
   protected int statusCode;
   protected HttpStatus status;
   protected String message;
-  protected Map<?,?> date;
+  protected Map<?,?> data;
 }
