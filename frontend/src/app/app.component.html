@@ -55,7 +55,7 @@
                                     user.status === 'ACTIVE' ? ' bg-success' : '',
                                     user.status === 'PENDING' ? ' bg-primary' : '',
                                     user.status === 'INACTIVE' ? ' bg-info' : '',
-                                    user.status === 'PENDING' ? ' bg-danger' : ''
+                                    user.status === 'BANNED' ? ' bg-danger' : ''
                                     ]">
                                       {{user.status}}
                                     </span>
@@ -72,11 +72,12 @@
                                     <span aria-hidden="true">&laquo; Previous</span>
                                 </a>
                             </li>
-                            <li>
+                            <li *ngFor="let pageNumber of [].constructor(state.appData.data.page.totalPages); let i = index;" class="page-item">
                                 <a class="page-link">
-
+                                    {{i + 1}}
                                 </a>
                             </li>
+
                             <li class="page-item pointer">
                                 <a class="page-link" aria-label="Next">
                                     <span aria-hidden="true">Next &raquo;</span>
